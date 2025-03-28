@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+</head>
+<body>
+    <h1>Welcome, {{ username }}!</h1>
+    <p>Your profile information:</p>
+    <ul>
+        <li>User ID: {{ user_id }}</li>
+        <li>Email: {{ email }}</li>
+        <li>Age: {{ age }}</li>
+    </ul>
+
+    <h2>Update Your Information</h2>
+    <form method="POST">
+        <label>Email:</label>
+        <input  name="email" value="{{ email }}" required>
+        <br>
+        <label>Age:</label>
+        <input type="number" name="age" value="{{ age }}" required>
+        <br>
+        <button type="submit">Update</button>
+    </form>
+
+    <br>
+    <a href="/logout">Logout</a>
+</body>
+</html>
